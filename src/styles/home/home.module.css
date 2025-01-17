@@ -1,0 +1,472 @@
+/* Home.module.css */
+
+/* Use CSS custom properties for colors if you like 
+   or reference the colors object directly in the component. 
+   This example uses class-based styling. */
+.html{
+    scroll-behavior: smooth;
+}
+/* Container */
+.container {
+    /* Replace background-color and text color */
+    /* If you're pulling them from the JS colors object, you can keep them inline in the component 
+       or define custom properties in a global CSS. */
+    padding: 0; /* If you want a zero outer margin/padding */
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem; /* Replacing px-5 py-3 from Bootstrap */
+    border-bottom: 2px;
+    padding-bottom:3rem;
+    border-bottom-style: solid;
+    border-bottom-color: #222222;
+  }
+  
+  /* Header Title */
+  .headerTitle {
+    font-family: var(--font-oswald);
+    font-size: 1.25rem; /* approximate fs-4 */
+    font-weight: 700;   /* fw-bold */
+    margin: 0;
+  }
+  
+  /* Navigation */
+  .navList {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navLink {
+    text-decoration: none;
+    /* color set via component inline or a utility class */
+  }
+  
+  /* Hero/Main */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 6rem; /* approximate px-4 py-5 */
+
+    
+  }
+  
+  /* Hero Section Row */
+  .heroRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+  }
+  
+  /* For larger screens, replicate the two-column layout */
+  @media (min-width: 576px) {
+    .heroRow {
+      flex-direction: row;
+    }
+  }
+  
+  /* Left Content in Hero */
+  .heroLeft {
+    text-align: left;
+  }
+  
+  /* Big Title in Hero */
+  .heroTitle {
+    font-family: var(--font-poppins);
+    font-size: 5.5rem;  /* approximate display-4 */
+    font-weight: 700;   /* fw-bold */
+    line-height: 1.2;   /* lh-sm */
+    margin: 0;
+  }
+  
+  /* Buttons */
+  .btnPrimary {
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: var(--font-poppins);
+    /* background & color can be set inline or via a variable */
+  }
+  
+  .btnSecondary {
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: var(--font-poppins);
+  }
+  
+  /* Position wrapper for the doodles image */
+  .imageWrapper {
+    position: relative;
+  }
+  
+  .doodles {
+    position: absolute;
+    z-index: -1;
+    top: -40px;
+    left: -40px;
+  }
+  
+/* About Section */
+.aboutSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .aboutContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .aboutContent {
+      flex-direction: row;
+      gap: 3rem;
+    }
+  }
+  
+  .aboutText {
+    max-width: 500px;
+  }
+  
+  .aboutTitle {
+    font-family: var(--font-poppins);
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .aboutParagraph {
+    margin-top: 1rem;
+    font-family: var(--font-poppins);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--color-secondary);
+  }
+  
+  .aboutImageWrapper {
+    flex-shrink: 0;
+    text-align: center;
+  }
+  
+  .aboutImage {
+    border-radius: 12px;
+  }
+  
+  
+  /* Contact Section */
+  .contactSection {
+    margin-top: 2rem; /* approximate mt-5 */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .contactTitle {
+    font-family: var(--font-poppins);
+    font-size: 1.5rem; /* approximate fs-2 */
+    font-weight: 700;  /* fw-bold */
+    margin: 0;
+  }
+  
+  .contactForm {
+    margin-top: 1rem; 
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  @media (min-width: 576px) {
+    .inputRow {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+  
+  .inputField {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    font-family: var(--font-poppins);
+    font-size: 1rem;
+    border-radius: 4px;
+  }
+  
+  /* Footer */
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 2rem; /* approximate mt-5 */
+  }
+  
+  .footerNav {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footerLink {
+    text-decoration: none;
+  }
+  
+  .footerPolicies {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  /* Utility example: If you need text color, or pass them inline from the component. */
+  .textPrimary {
+    color: var(--color-primary);
+  }
+  .textSecondary {
+    color: var(--color-secondary);
+  }
+  
+  .paddingGapper1{
+    padding: 6rem;
+  }
+  .paddingGapper2{
+    padding: 1rem;
+  }
+.scrollArrowWrapper {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.scrollArrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--color-primary);
+  cursor: pointer;
+  animation: bounce 1.5s infinite;
+}
+
+.scrollArrow:focus {
+  outline: none;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+
+/* Projects Section */
+.projectsSection {
+  padding: 4rem 1rem;
+  text-align: center;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.projectsTitle {
+  font-family: var(--font-poppins);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.projectsSubtitle {
+  font-family: var(--font-poppins);
+  font-size: 1rem;
+  color: var(--color-secondary);
+  margin-bottom: 2rem;
+}
+
+.projectsLink {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+@media (min-width: 768px) {
+  .projectCard {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.projectInfo {
+  max-width: 600px;
+  text-align: left;
+}
+
+.projectName {
+  font-family: var(--font-poppins);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.projectDate {
+  font-family: var(--font-poppins);
+  font-size: 0.9rem;
+  color: var(--color-secondary);
+  margin-bottom: 1rem;
+}
+
+.projectDescription {
+  font-family: var(--font-poppins);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.projectTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.projectTags span {
+  font-family: var(--font-poppins);
+  font-size: 0.9rem;
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+}
+
+.projectLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.projectImageWrapper {
+  max-width: 500px;
+  text-align: center;
+}
+
+.projectImage {
+  border-radius: 12px;
+}
+.projectCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 2rem 1rem;
+    background-color: var(--color-background);
+    border-radius: 12px;
+  }
+  
+  @media (min-width: 768px) {
+    .projectCard {
+      flex-direction: row;
+      align-items: flex-start; /* Align image and text to the top */
+    }
+  }
+  
+  
+  .projectInfo {
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  .projectName {
+    font-family: var(--font-poppins);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .projectDate {
+    font-family: var(--font-poppins);
+    font-size: 0.9rem;
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+  }
+  
+  .projectDescription {
+    font-family: var(--font-poppins);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .projectTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .projectTags span {
+    font-family: var(--font-poppins);
+    font-size: 0.9rem;
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+  }
+  
+  .projectLinks {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .projectImageWrapper {
+    max-width: 500px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  
+  .projectImage {
+    border-radius: 12px;
+    width: 100%;
+    height: auto;
+  }
+  
